@@ -28,7 +28,7 @@ Frontend
 HTML5, CSS3, JavaScript
 Bootstrap
 Chart.js
-Templates: eLEARNING (Front Office), TailAdmin / PlainAdmin (Back Office) <!-- TODO: confirm the templates actually used -->
+Templates: eLEARNING (Front Office), TailAdmin / PlainAdmin (Back Office) 
 Backend
 PHP (MVC architecture)
 MySQL
@@ -46,10 +46,9 @@ Esprit-PIweb-2A5-2027-Aquintiq/
 ├── app/                # Back Office (Controllers, Models, Views/partials, layout.php)
 ├── config.php
 └── index.php
-<!-- TODO: adjust the tree to match your real structure -->
+
 Contributors
 Youssef Ben Ounaissa – Esprit School of Engineering
-<!-- TODO: add teammates (name – role) -->
 Academic Context
 Developed at Esprit School of Engineering – Tunisia
 
