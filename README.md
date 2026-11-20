@@ -35,7 +35,7 @@ app/Views/assets     -> css, js, img, lib
 
 ## Academic Context
 Developed at **Esprit School of Engineering – Tunisia**
-[PI] – [Class] | 2026–2027
+[PI] – [2A5] | 2026–2027
 
 ## Getting Started
 ```bash
