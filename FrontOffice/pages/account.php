@@ -12,7 +12,7 @@
     <div class="flash <?= e($flash['type']) ?>" role="status"><?= e($flash['text']) ?></div>
   <?php endif; ?>
 
-  <form class="form acct" method="post" action="<?= e(url('account')) ?>" enctype="multipart/form-data" data-validate novalidate>
+  <form class="form acct" method="post" action="<?= e(url('account')) ?>" enctype="multipart/form-data">
     <input type="hidden" name="csrf" value="<?= e($csrf) ?>">
 
     <div class="acct-photo">
@@ -27,16 +27,15 @@
 
     <div class="acct-fields">
       <label>Nom complet
-        <input type="text" name="name" required maxlength="80" data-label="Le nom" data-min="2" data-max="80" value="<?= e($u['name'] ?? '') ?>" autocomplete="name">
+        <input type="text" name="name" required maxlength="80" value="<?= e($u['name'] ?? '') ?>" autocomplete="name">
       </label>
       <label>Adresse e-mail
         <input type="email" value="<?= e($u['email'] ?? '') ?>" disabled>
       </label>
       <label>Téléphone (facultatif)
-        <input type="tel" name="phone" maxlength="20" data-label="Le téléphone" data-type="phone" value="<?= e($u['phone'] ?? '') ?>" autocomplete="tel">
+        <input type="tel" name="phone" maxlength="20" value="<?= e($u['phone'] ?? '') ?>" autocomplete="tel">
       </label>
       <button class="btn btn-green" type="submit">Enregistrer</button>
     </div>
   </form>
 </div>
-<script src="<?= asset('js/validate.js') ?>" defer></script>
