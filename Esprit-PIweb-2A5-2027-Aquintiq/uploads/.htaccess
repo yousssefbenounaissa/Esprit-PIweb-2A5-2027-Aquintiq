@@ -1,0 +1,4 @@
+# Les photos de profil sont servies, mais aucun script ne doit s'exécuter ici
+<FilesMatch "\.(php|phtml|phar)$">
+  Require all denied
+</FilesMatch>
