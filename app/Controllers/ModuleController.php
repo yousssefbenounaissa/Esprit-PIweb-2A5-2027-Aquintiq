@@ -11,7 +11,7 @@ class ModuleController extends Controller
 {
     public function front(): void { $this->show('front', ''); }
 
-    public function back(): void { $this->requireRole('Administrateur'); $this->show('back', 'admin-'); }
+    public function back(): void { $this->show('back', 'admin-'); }
 
     private function show(string $area, string $prefix): void
     {
