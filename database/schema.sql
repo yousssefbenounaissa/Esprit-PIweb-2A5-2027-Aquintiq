@@ -90,6 +90,3 @@ CREATE TABLE contact_message (
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 
--- Administrateur par défaut (mot de passe stocké haché ; tout autre compte créé par inscription = Agriculteur)
-INSERT INTO user (role_id, name, email, password_hash)
-VALUES (3, 'Ahmed Hech', 'hechahmed5@gmail.com', '$2y$10$pEva5Xv7zkXsy7ZTGqr3ceYl9C38nE7ZKTIu0.GCwuVQLUZQYgRCi');
