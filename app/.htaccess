@@ -1,4 +1,0 @@
-# Seuls les assets (css/js/img) sont servis ; les vues PHP ne sont pas accessibles directement
-<FilesMatch "\.php$">
-  Require all denied
-</FilesMatch>
