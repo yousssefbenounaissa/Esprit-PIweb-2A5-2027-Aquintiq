@@ -38,7 +38,3 @@
 .acct-fields{max-width:520px}
 .acct input:disabled{color:var(--muted,#667)}
 @media(max-width:800px){.acct{grid-template-columns:1fr;gap:1.5rem}}
-
-.logout-form{margin:0}
-.logout-form button{display:flex;align-items:center;gap:.6rem;width:100%;padding:.6rem .7rem;border:0;background:none;border-radius:4px;font:inherit;font-size:.93rem;color:var(--ink,#222);cursor:pointer;text-align:left}
-.logout-form button:hover{background:var(--cream,#f6f4ea);color:var(--leaf,#269447)}

@@ -170,7 +170,3 @@
 #spinner.show{opacity:1;visibility:visible}
 .drop{width:34px;height:34px;background:var(--cyan);border-radius:50% 0 50% 50%;transform:rotate(-45deg);animation:pulse 1s ease-in-out infinite alternate}
 @keyframes pulse{from{transform:rotate(-45deg) scale(.8)}to{transform:rotate(-45deg) scale(1.2);background:var(--leaf)}}
-.field-error{display:block;color:#B3261E;font-size:.8rem;font-weight:600;margin-top:.25rem}
-.form input.invalid,.form textarea.invalid{border-color:#B3261E}
-.form .row2{display:grid;grid-template-columns:1fr 1fr;gap:0 1.4rem}
-@media(max-width:640px){.form .row2{grid-template-columns:1fr}}

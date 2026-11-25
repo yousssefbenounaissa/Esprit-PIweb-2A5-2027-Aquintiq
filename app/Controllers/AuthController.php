@@ -36,10 +36,10 @@ class AuthController extends Controller
     public function logout(): void
     {
         $this->startSession();
-        // Déconnexion uniquement par POST + jeton CSRF (un simple lien ne suffit pas)
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !csrfValid()) $this->redirect('home');
-        destroySession();
-        $this->redirect('login');
+        $_SESSION = [];
+        session_destroy();
+        header('Location: ' . url('login'));
+        exit;
     }
 
     private function authenticate(): void
@@ -119,7 +119,7 @@ class AuthController extends Controller
     private function startSession(): void
     {
         if (session_status() !== PHP_SESSION_ACTIVE) session_start();
-        csrfToken();
+        $_SESSION['csrf'] ??= bin2hex(random_bytes(32));
     }
 
     private function dbError(): string
@@ -131,8 +131,6 @@ class AuthController extends Controller
     private function show(string $mode, ?string $error = null, array $old = []): void
     {
         $csrf  = $_SESSION['csrf'];
-        $flash = takeFlash();
-        if ($flash && !$error) $error = $flash['text'];
         $title = $this->title;
         require dirname(__DIR__, 2) . '/FrontOffice/pages/login.php';
     }
