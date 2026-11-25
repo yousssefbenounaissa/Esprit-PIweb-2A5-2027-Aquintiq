@@ -66,20 +66,3 @@ function avatarHtml(array $u, string $size = ''): string {
     return '<span class="avatar'.($size ? ' '.$size : '').'">'.$inner.'</span>';
 }
 
-
-/* ---------- Sécurité : CSRF + messages flash (atelier Sessions et Sécurité) ---------- */
-function csrfToken(): string { return $_SESSION['csrf'] ??= bin2hex(random_bytes(32)); }
-function csrfField(): string { return '<input type="hidden" name="csrf" value="' . e(csrfToken()) . '">'; }
-function csrfValid(): bool { return hash_equals(csrfToken(), (string) ($_POST['csrf'] ?? '')); }
-function flash(string $type, string $text): void { $_SESSION['flash'] = ['type' => $type, 'text' => $text]; }
-function takeFlash(): ?array { $f = $_SESSION['flash'] ?? null; unset($_SESSION['flash']); return $f; }
-/** Détruit la session ET supprime le cookie PHPSESSID. */
-function destroySession(): void
-{
-    $_SESSION = [];
-    if (ini_get('session.use_cookies')) {
-        $c = session_get_cookie_params();
-        setcookie(session_name(), '', ['expires' => time() - 42000, 'path' => $c['path'], 'domain' => $c['domain'], 'secure' => $c['secure'], 'httponly' => true, 'samesite' => 'Lax']);
-    }
-    if (session_status() === PHP_SESSION_ACTIVE) session_destroy();
-}

@@ -95,20 +95,3 @@
 .sb-group.collapsed .ic{transform:rotate(0)}
 .sb-sub{display:none}
 .sb-sub.open{display:block}
-.logout-form{margin:0}
-.logout-form button{display:block;width:100%;padding:.5rem .6rem;border:0;background:none;border-radius:4px;font:inherit;color:inherit;cursor:pointer;text-align:left}
-.logout-form button:hover{background:var(--cream)}
-/* Formulaires Back Office + erreurs de validation */
-.bform{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem 1.4rem;padding:0 1.4rem 1.4rem}
-.bform label{font-weight:600;font-size:.86rem;color:var(--navy)}
-.bform input,.bform select{display:block;width:100%;margin-top:.3rem;padding:.6rem .7rem;font:inherit;border:1px solid var(--line);border-radius:4px;background:#fff}
-.bform input:focus,.bform select:focus{outline:2px solid var(--lime);border-color:var(--lime)}
-.bform .full{grid-column:1/-1;display:flex;gap:.8rem;align-items:center}
-.btn-sec{background:var(--cream);color:var(--navy);border:1px solid var(--line);padding:.55rem 1.2rem;font:600 .86rem 'Poppins',sans-serif;border-radius:4px 14px 4px 14px;text-decoration:none;cursor:pointer}
-.inline-form{display:inline;margin:0}
-.link-btn{background:none;border:0;padding:0;font:inherit;cursor:pointer}
-.role-sel{padding:.25rem .4rem;border:1px solid var(--line);border-radius:4px;font:inherit;font-size:.82rem}
-.flash{margin:0 0 1.2rem;padding:.8rem 1rem;border-radius:4px 14px 4px 14px;font-weight:600}
-.flash.ok{background:#e4f6d8;color:#0b4d2a}.flash.err{background:#fde7e7;color:#a12626}
-.field-error{display:block;color:#B3261E;font-size:.78rem;font-weight:600;margin-top:.25rem}
-input.invalid,textarea.invalid,select.invalid{border-color:#B3261E!important}
