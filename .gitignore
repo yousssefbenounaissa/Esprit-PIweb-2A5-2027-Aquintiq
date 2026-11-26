@@ -1,0 +1,7 @@
+.vscode/
+.idea/
+*.log
+config.local.php
+node_modules/
+uploads/avatars/*
+!uploads/avatars/.gitkeep

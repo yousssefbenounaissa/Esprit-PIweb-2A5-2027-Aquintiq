@@ -1,0 +1,44 @@
+/* Pastille de profil + page « Paramètres du compte » */
+.avatar{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;overflow:hidden;flex:none;
+  background:linear-gradient(135deg,var(--navy,#123B65),var(--sky,#0f6a9c));color:#fff;
+  font:600 .95rem/1 'Poppins',sans-serif;letter-spacing:.02em;text-transform:uppercase;
+  border:2px solid #fff;box-shadow:0 0 0 2px var(--leaf,#269447)}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.avatar.lg{width:60px;height:60px;font-size:1.25rem}
+.avatar.xl{width:120px;height:120px;font-size:2.4rem;border-width:3px}
+
+.user-menu{position:relative;margin-left:1rem}
+.user-menu summary{list-style:none;cursor:pointer;display:block;border-radius:50%}
+.user-menu summary::-webkit-details-marker{display:none}
+.user-menu summary:focus-visible{outline:3px solid var(--cyan,#00A6D6);outline-offset:3px}
+.user-menu summary:hover .avatar{box-shadow:0 0 0 2px var(--lime,#5fce06)}
+.user-pop{position:absolute;right:0;top:calc(100% + 12px);min-width:270px;z-index:120;padding:.6rem;
+  background:var(--paper,#fff);border:1px solid var(--line,#ddd);border-radius:4px 18px 4px 18px;box-shadow:0 14px 30px rgba(0,28,90,.16)}
+.user-pop-head{display:flex;gap:.8rem;align-items:center;padding:.6rem .6rem .9rem;margin-bottom:.4rem;border-bottom:1px dashed var(--line,#ddd)}
+.user-pop-head div{display:grid;gap:.15rem;min-width:0}
+.user-pop-head strong{color:var(--navy,#123B65);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.user-pop-head small{color:var(--muted,#667);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.user-pop a{display:flex;align-items:center;gap:.6rem;padding:.6rem .7rem;border-radius:4px;text-decoration:none;color:var(--ink,#222);font-size:.93rem}
+.user-pop a:hover{background:var(--cream,#f6f4ea);color:var(--leaf,#269447)}
+.btn-login{margin-left:1rem;padding:.5rem 1.1rem;border:2px solid var(--navy,#123B65);border-radius:var(--leafr,18px 4px 18px 4px);
+  font-weight:600;font-size:.93rem;color:var(--navy,#123B65);text-decoration:none;white-space:nowrap}
+.btn-login:hover{background:var(--navy,#123B65);color:#fff}
+@media(max-width:900px){.nav-toggle{margin-left:auto}.user-menu,.btn-login{margin-left:.7rem}.user-pop{right:-6px}}
+
+.flash{margin:1.6rem 0 0;padding:.8rem 1rem;border-radius:4px 14px 4px 14px;font-weight:600}
+.flash.ok{background:#e4f6d8;color:#0b4d2a}
+.flash.err{background:#fde7e7;color:#a12626}
+.acct{display:grid;grid-template-columns:260px 1fr;gap:3rem;padding:2.5rem 0 4rem;align-items:start}
+.acct-photo{display:grid;gap:.7rem;justify-items:start}
+.acct-photo label{margin:0}
+.acct input[type=file]{border:0;padding:.3rem 0;font-size:.85rem;margin:0}
+.acct input[type=checkbox]{display:inline-block;width:auto;margin:0 .4rem 0 0}
+.acct-check{font-weight:400!important;font-size:.9rem!important;margin:0!important}
+.acct-hint{margin:0;font-size:.82rem;color:var(--muted,#667)}
+.acct-fields{max-width:520px}
+.acct input:disabled{color:var(--muted,#667)}
+@media(max-width:800px){.acct{grid-template-columns:1fr;gap:1.5rem}}
+
+.logout-form{margin:0}
+.logout-form button{display:flex;align-items:center;gap:.6rem;width:100%;padding:.6rem .7rem;border:0;background:none;border-radius:4px;font:inherit;font-size:.93rem;color:var(--ink,#222);cursor:pointer;text-align:left}
+.logout-form button:hover{background:var(--cream,#f6f4ea);color:var(--leaf,#269447)}
