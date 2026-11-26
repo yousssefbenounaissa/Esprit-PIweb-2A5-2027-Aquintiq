@@ -18,7 +18,7 @@ $me = $_SESSION['user'] ?? null;
     <?php if (($me['role'] ?? '') === 'Administrateur'): ?>
       <a href="<?= e(url('admin-dashboard')) ?>"><?= icon('grid', 18) ?> Espace admin</a>
     <?php endif; ?>
-    <form method="post" action="<?= e(url('logout')) ?>" class="logout-form"><?= csrfField() ?><button type="submit"><?= icon('out', 18) ?> Déconnexion</button></form>
+    <a href="<?= e(url('logout')) ?>"><?= icon('out', 18) ?> Déconnexion</a>
   </div>
 </details>
 <script src="<?= asset('js/avatar.js') ?>" defer></script>
