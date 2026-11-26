@@ -7,5 +7,5 @@ class DashboardController extends Controller
     protected string $page  = 'admin-dashboard';
     protected string $title = 'Tableau de bord | AQUINTIQ';
 
-    public function index(): void { $this->requireRole('Administrateur'); $this->render('dashboard', [], 'dashboard_scripts'); }
+    public function index(): void { $this->render('dashboard', [], 'dashboard_scripts'); }
 }

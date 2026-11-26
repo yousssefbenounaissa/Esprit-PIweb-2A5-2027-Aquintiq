@@ -18,7 +18,7 @@ return [
   // ---------- Back Office ----------
   'dashboard'       => ['DashboardController', 'index'],   // atelier : index.php?page=dashboard
   'admin-dashboard' => ['DashboardController', 'index'],
-  'admin-users' => ['UserController', 'index'],
+  'admin-users' => ['ModuleController', 'back'],
   'admin-farms' => ['ModuleController', 'back'],
   'admin-irrigation' => ['ModuleController', 'back'],
   'admin-marketplace' => ['ModuleController', 'back'],

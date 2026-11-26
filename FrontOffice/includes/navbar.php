@@ -20,9 +20,7 @@ $inModules = array_key_exists($currentPage, $frontModules);
       </div>
       <a class="<?= navActive('about', $currentPage) ?>" href="<?= url('about') ?>">À propos</a>
       <a class="<?= navActive('contact', $currentPage) ?>" href="<?= url('contact') ?>">Contact</a>
-      <?php if (($_SESSION['user']['role'] ?? '') === 'Administrateur'): ?>
       <a class="nav-cta" href="<?= url('admin-dashboard') ?>">Espace admin</a>
-      <?php endif; ?>
     </nav>
     <?php require __DIR__ . '/avatar.php'; ?>
   </div>
